@@ -5,16 +5,24 @@ import java.util.Scanner;
 public class ClientMain {
     public static void main(String[] args) {
         Client client = new Client();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("What is your name?");
-        client.name = scanner.nextLine();
-        System.out.println("What is your birth year?");
-        client.year = scanner.nextInt();
-        scanner.nextLine();
-        System.out.println("What is your address?");
-        client.address = scanner.nextLine();
+        client.setName("Kiss Viri");
+        System.out.println(client.getName());
+        client.setYear(1983);
+        System.out.println(client.getYear());
+        client.migrate("Chicago");
+        System.out.println(client.getAddress());
+        client.migrate("New York");
+        System.out.println(client.getAddress());
+        /*scanner scanner = new scanner(system.in);
+        system.out.println("what is your name?");
+        client.name = scanner.nextline();
+        system.out.println("what is your birth year?");
+        client.year = scanner.nextint();
+        scanner.nextline();
+        system.out.println("what is your address?");
+        client.address = scanner.nextline();
 
-        System.out.println(client.name + " " + client.year + " " + client.address);
+        system.out.println(client.name + " " + client.year + " " + client.address);*/
     }
 }
 
